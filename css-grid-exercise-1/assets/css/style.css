@@ -1,0 +1,70 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/* Fix Clearing Bugs */
+
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+main {
+    /* background-image: url('../img/grid.png'); */
+    width: 80vw;
+    margin: 20px auto;
+    border: 1px solid #000;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap:20px;
+    padding: 20px;
+}
+
+header.primary{
+   /* width: 916px; 
+    width: 95.815%; */
+    background: rgba(0, 0, 0, 0.5);
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+}
+
+#content{
+  grid-column: 1 / 13;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+footer.primary{
+  grid-column: 1 / 13;
+  grid-row: 3 / 4;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#blog{
+    /* width: 682px; 
+    width: 71.338%; */
+    background: rgba(0, 0, 0, 0.5);
+    grid-column: 1 / 10;
+    grid-row: 1 / 2;
+}
+
+aside {
+    /* width: 214px; 
+    width: 22.384%; */
+    background: rgba(0, 0, 0, 0.5);
+    grid-column: 10 / 13;
+    grid-row: 1 / 2;
+}

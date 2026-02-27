@@ -1,0 +1,18 @@
+body {
+background-color: #8C4E03;
+  padding: 20px;
+}
+
+header h1 {
+  background-color: #3B7F26;
+  display: inline-block;
+  color: #EDCB7B;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+header h2 {
+  color: #EDCB7B;
+  padding: 10px;
+  border-radius: 10px;
+}

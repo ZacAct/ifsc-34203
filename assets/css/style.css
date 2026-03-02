@@ -1,18 +1,29 @@
 body {
-background-color: #8C4E03;
+background-color: #260705;
   padding: 20px;
+  color: #F2C791;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none; 
+}
+
+header {
+  margin-bottom: 20px;
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 header h1 {
-  background-color: #3B7F26;
+  background-color: #8C4A23;
   display: inline-block;
-  color: #EDCB7B;
   padding: 20px;
   border-radius: 10px;
 }
 
 header h2 {
-  color: #EDCB7B;
   padding: 10px;
   border-radius: 10px;
 }

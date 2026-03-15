@@ -39,7 +39,6 @@ img {
 /* ----- Design Time ----- */
 
 .container {
-    width: 420px;
     margin: 0 auto; 
     background: rgba(0, 0, 0, 0.15);
 }
@@ -226,3 +225,46 @@ main.container {
 #education {
   grid-area: education;
 }
+
+/* ----- Media Queries ----- */
+
+@media screen and (min-width: 768px) {
+
+header.container{
+  max-width:900px;
+}
+
+main.container{
+  max-width:900px;
+  grid-template-columns: 36.5% auto;
+  grid-template-areas: 
+    "title title"
+    "about about"
+    "skills experience"
+    ". education"
+    ;
+ }
+
+ #about{
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 300px 1fr auto;
+  grid-template-areas:
+   "bio details details"
+   "related related related";
+ }
+ .bio{
+  grid-area: bio;
+ }
+.details{
+  grid-area: details;
+ }
+
+ .related-links{
+  grid-area:related;
+  border-bottom:1px solid var(--accent-color-1);
+  padding-bottom:50px;
+ }
+ 
+ }
+

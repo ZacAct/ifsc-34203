@@ -40,7 +40,7 @@ img {
 
 .container {
     margin: 0 auto; 
-    background: rgba(0, 0, 0, 0.15);
+    
 }
 
 /* ----- Global Style ----- */
@@ -158,7 +158,7 @@ dd {
 }
 
 .related-links a:hover {
-  background: rgba(0, 0, 0, 0.95);
+  background: var(--primary-type-color);
 }
 
 .related-links li {
@@ -242,6 +242,7 @@ main.container{
     "about about"
     "skills experience"
     ". education"
+    
     ;
  }
 
@@ -250,11 +251,16 @@ main.container{
   gap: 2em;
   grid-template-columns: 300px 1fr auto;
   grid-template-areas:
-   "bio details details"
-   "related related related";
+   "pfp details details"
+   "words words words"
+   "related related related"
+   ;
  }
- .bio{
-  grid-area: bio;
+.headshot{
+  grid-area: pfp;
+ }
+ p[itemprop="description"]{
+  grid-area: words;
  }
 .details{
   grid-area: details;
@@ -268,3 +274,30 @@ main.container{
  
  }
 
+ 
+@media screen and (min-width: 992px) {
+ 
+header.container {
+  max-width:1200px;
+}  
+main.container {
+  max-width:1200px;
+  grid-template-columns: 30% auto;
+  grid-template-areas: 
+     "title title"
+    "about about"
+    "skills experience"
+    ". education"
+    ;
+ }
+
+ #about{
+  display: grid;
+  gap: 2em;
+  grid-template-columns: 300px 1fr auto;
+  grid-template-areas:
+   "pfp details details"
+   "words words words"
+   "related related related";
+ }
+}

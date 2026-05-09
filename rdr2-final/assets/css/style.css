@@ -1,0 +1,48 @@
+:root{
+   --main-bg-color: #000000;
+   --primary-type-color: #ffffff;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* ----- Typography ----- */
+body {
+    font-family: "Noto Serif", serif;
+    font-style: normal;  
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- Fluid Images -----*/
+img {
+    max-width: 100%;
+}
+
+
+/* ----- Global Styles ----- */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--primary-type-color);
+    line-height: 1.5;
+
+}
+
+a:link, a:visited {
+    color: var(--primary-type-color);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul

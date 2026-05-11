@@ -31,14 +31,26 @@ header {
   padding: 1px;
 }
 
+header h1 {
+  font-size: 50px;
+}
+
+header ul {
+  font-size: 25px;
+}
+
 /* ----- Fluid Images -----*/
 img {
   max-width: 100%;
 }
 
+.logo {
+  display: none;
+}
+
 .hero img {
   width: 100%;
-  height: 820px;
+  height: 890px;
   object-fit: cover;
   display: block;
 }
@@ -163,7 +175,7 @@ h2 {
 }
 
 h2.home {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 h2.home a:hover,
@@ -207,7 +219,7 @@ h2.home a:focus {
 }
 
 h2.world {
-  font-size: 40px;
+  font-size: 50px;
 }
 
 /* ----- Combat Page ----- */
@@ -243,8 +255,57 @@ h2.world {
 }
 
 h2.combat {
-  font-size: 40px;
+  font-size: 50px;
 }
+
+/* ----- Hunting Page ----- */
+.hunting-page {
+  display: grid;
+  grid-template-areas:
+    "hunting-content"
+    "game-img"
+    "game-content"
+    "fishing-img"
+    "fishing-content"
+    "locations-img"
+    "locations-content"
+    "selling-img"
+    "selling-content"
+  ;
+}
+
+#hunting-content {
+  grid-area: hunting-content;
+}
+#game-img {
+  grid-area: game-img;
+}
+#game-content {
+  grid-area: game-content;
+}
+#fishing-img {
+  grid-area: fishing-img;
+}
+#fishing-content {
+  grid-area: fishing-content;
+}
+#locations-img {
+  grid-area: locations-img;
+}
+#locations-content {  
+  grid-area: locations-content;
+}
+#selling-img {
+  grid-area: selling-img;
+}
+#selling-content {
+  grid-area: selling-content;
+}
+
+h2.hunting {
+  font-size: 50px;
+}
+
 /* ----- Media Queries ----- */
 @media screen and (min-width: 768px) {
   .container {
@@ -300,6 +361,7 @@ h2.combat {
     margin-bottom: 4rem;
   }
 
+
   .combat-page {
     justify-items: center;
     max-width: 900px;
@@ -319,10 +381,49 @@ h2.combat {
     margin-bottom: 4rem;
   }
 
+    #custom-img,
+    #deadeye-img {
+    margin-top: 4rem;
+  } 
+
+  .hunting-page {
+    justify-items: center;
+    max-width: 900px;
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+      "hunting-content hunting-content"
+      "game-img game-content"
+      "fishing-img fishing-content"
+      "locations-img locations-content"
+      "selling-img selling-content";
+  }
+
+    #hunting-content,
+    #game-content,
+    #fishing-content,
+    #locations-content,
+    #selling-content {
+    margin: 0 2rem;
+    margin-bottom: 4rem;
+    }
+
+    #game-img,
+    #fishing-img,
+    #locations-img,
+    #selling-img {
+    margin-top: 3.9rem;
+
+
+  }
+
 @media screen and (min-width: 992px) {
   .container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+  
+  .logo {
+    display: block;
   }
 
   nav.primary {
@@ -391,6 +492,39 @@ h2.combat {
     #deadeye-content {
     margin: 0 2rem;
     margin-bottom: 4rem;
+  }
+  
+    #custom-img,
+    #deadeye-img {
+    margin-top: 4rem;
+  }
+
+  .hunting-page {
+    justify-items: center;
+    max-width: 1200px;
+    grid-template-columns: 50% auto;
+    grid-template-areas:
+      "hunting-content hunting-content"
+      "game-img game-content"
+      "fishing-img fishing-content"
+      "locations-img locations-content"
+      "selling-img selling-content";
+  }
+
+    #hunting-content,
+    #game-content,
+    #fishing-content,
+    #locations-content,
+    #selling-content {
+    margin: 0 2rem;
+    margin-bottom: 4rem;
+  }
+
+    #game-img,
+    #fishing-img,
+    #locations-img,
+    #selling-img {
+    margin-top: 3.9rem;
   }
 
 }
